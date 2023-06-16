@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import Result from "./Result";
 
 export default function AddPhoto() {
   const [image, setImage] = useState<string | null>(null);
@@ -23,14 +24,17 @@ export default function AddPhoto() {
   };
 
   return (
-    <div className="plant-container">
-      {image && <img src={image} alt="Uploaded" />}
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
-          {image && <button type="submit">Analyze</button>}
-        </form>
+    <>
+      <div className="plant-container">
+        {image && <img src={image} alt="Uploaded" />}
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input type="file" accept="image/*" onChange={handleImageUpload} />
+            {image && <button type="submit">Analyze</button>}
+          </form>
+        </div>
       </div>
-    </div>
+      <Result />
+    </>
   );
 }

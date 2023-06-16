@@ -13,11 +13,11 @@ img {
 }
 
 .plant-container {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 button {
@@ -30,4 +30,13 @@ button {
   border-radius: 5px;
   font-size: 18px;
   margin-left: 20px;
+}
+
+.results {
+  margin-top: 100px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 20px;
 }

@@ -1,13 +1,7 @@
 import AddPhoto from "./components/AddPhoto";
-import Result from "./components/Result";
 
 function App() {
-  return (
-    <>
-      <AddPhoto />
-      <Result />
-    </>
-  );
+  return <AddPhoto />;
 }
 
 export default App;
